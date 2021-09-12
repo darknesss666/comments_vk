@@ -5,6 +5,7 @@ import os
 import sys
 import shutil
 
+os.system('clear') 
 f = Figlet(font='ascii___')
 
 def DrawText(text,center=True):
@@ -13,7 +14,7 @@ def DrawText(text,center=True):
     else:
       print(f.renderText(text))
 
-DrawText('\n666',center=True)
+DrawText('666',center=True)
 print("\033[35m{}\033[0m".format("\nДанный скрипт написал darknesss666🦋."))
 
 tg = input("\033[33m{}\033[0m".format("Хочешь добавить автора скрипта в друзья в ВК? [y/n]"))
