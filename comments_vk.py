@@ -4,6 +4,7 @@ import random, vk, time
 import os
 import sys
 import shutil
+import traceback
 
 os.system('clear') 
 f = Figlet(font='ascii___')
@@ -40,5 +41,5 @@ while True:
         apivk.wall.createComment(owner_id=user_id, post_id=posts_id, message=msgs, guid=random.randint(0, 9999999999))
         print(time.strftime("\033[36m[%d.%m.%Y|%H:%M:%S]", time.localtime()), "1 комм был отправлен.")
     except:
-        pass
+        traceback.print_exc() 
     time.sleep(3)
