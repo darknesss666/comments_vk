@@ -28,6 +28,7 @@ if tg == "y":
     msgs = input("\033[33m{}\033[0m".format("🔆Введи комментарий накрутки: "))
     session = vk.Session(access_token=TOKEN)
     apivk = vk.API(session, v = 5.95)
+    print('\033[32m{}\033[0m.format("Чтобы остановить скрипт нажми ctrl + c + enter")) 
 elif tg == "n":
     print("\033[31m{}\033[0m".format("Ну не хочешь, как хочешь(("))
     TOKEN = input("\033[33m{}\033[0m".format("🔐Введи токен kate_mobile: "))
@@ -36,6 +37,7 @@ elif tg == "n":
     msgs = input("\033[33m{}\033[0m".format("🔆Введи комментарий накрутки: "))
     session = vk.Session(access_token=TOKEN)
     apivk = vk.API(session, v = 5.95)
+    print('\033[31m{}\033[0m.format("Чтобы остановить скрипт нажми ctrl + c + enter")) 
 while True:
     try:
         apivk.wall.createComment(owner_id=user_id, post_id=posts_id, message=msgs, guid=random.randint(0, 9999999999))
